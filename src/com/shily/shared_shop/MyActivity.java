@@ -3,7 +3,6 @@ package com.shily.shared_shop;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -17,7 +16,7 @@ public class MyActivity extends Activity implements View.OnClickListener{
     private LinearLayout mTabFriend;
 
     private ContentFragment mWeixin;
-    private ShopFragment mShop;
+    private HomeFragment mHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -40,8 +39,8 @@ public class MyActivity extends Activity implements View.OnClickListener{
     {
         FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        mWeixin = new ContentFragment();
-        transaction.replace(R.id.id_content, mWeixin);
+        mHome = new HomeFragment();
+        transaction.replace(R.id.id_content, mHome);
         transaction.commit();
     }
 
@@ -63,11 +62,11 @@ public class MyActivity extends Activity implements View.OnClickListener{
                 transaction.replace(R.id.id_content, mWeixin);
                 break;
             case R.id.tab_local:
-                if (mShop == null)
+                if (mHome == null)
                 {
-                    mShop = new ShopFragment();
+                    mHome = new HomeFragment();
                 }
-                transaction.replace(R.id.id_content, mShop);
+                transaction.replace(R.id.id_content, mHome);
                 break;
         }
         // transaction.addToBackStack();

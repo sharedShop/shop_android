@@ -3,13 +3,13 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
-
+<!--
     <fragment
             android:id="@+id/id_fragment_title"
             android:name="com.shily.shared_shop.TitleFragment"
             android:layout_width="fill_parent"
             android:layout_height="45dp" />
-
+-->
     <include
             android:id="@+id/id_ly_bottombar"
             android:layout_width="fill_parent"
@@ -21,8 +21,7 @@
             android:id="@+id/id_content"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_above="@id/id_ly_bottombar"
-            android:layout_below="@id/id_fragment_title" />
+            android:layout_above="@id/id_ly_bottombar" />
 
 </RelativeLayout>
 

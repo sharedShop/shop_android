@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 /**
  * Created by shanlihou on 17-10-23.
  */
-public class ShopFragment extends Fragment {
+public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return inflater.inflate(R.layout.frag_home, container, false);
     }
 }
