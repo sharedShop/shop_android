@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
+              android:background="@color/white"
               android:layout_height="match_parent" android:weightSum="1">
     <RelativeLayout android:layout_width="match_parent"
                     android:background="@color/background_color"
-                    android:layout_height="600px">
+                    android:id="@+id/id_arc_image"
+                    android:layout_height="300px">
 
         <LinearLayout
                 android:orientation="horizontal"
@@ -33,5 +35,32 @@
                     android:id="@+id/textView" android:layout_gravity="center_vertical" android:layout_weight="0.67"/>
         </LinearLayout>
     </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_marginTop="20px"
+                  android:background="@drawable/home_mid"
+                  android:layout_height="100px">
+        <com.shily.shared_shop.view.ImageTextButton android:layout_width="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:id="@+id/id_whole_shop"
+                                                    android:layout_height="match_parent">
+                                                    </com.shily.shared_shop.view.ImageTextButton>
+
+        <com.shily.shared_shop.view.ImageTextButton android:layout_width="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:id="@+id/id_divide_shop"
+                                                    android:layout_height="match_parent">
+        </com.shily.shared_shop.view.ImageTextButton>
+        <com.shily.shared_shop.view.ImageTextButton android:layout_width="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:id="@+id/id_shop_in_shop"
+                                                    android:layout_height="match_parent">
+        </com.shily.shared_shop.view.ImageTextButton>
+        <com.shily.shared_shop.view.ImageTextButton android:layout_width="match_parent"
+                                                    android:layout_weight="1"
+                                                    android:id="@+id/id_map_shop"
+                                                    android:layout_height="match_parent">
+        </com.shily.shared_shop.view.ImageTextButton>
+                  </LinearLayout>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.shily.shared_shop;
+package com.shily.shared_shop.Activity;
 
 import android.app.Activity;
 import android.app.FragmentManager;
@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
+import com.shily.shared_shop.Fragment.ContentFragment;
+import com.shily.shared_shop.Fragment.HomeFragment;
+import com.shily.shared_shop.R;
 
 public class MyActivity extends Activity implements View.OnClickListener{
     /**
      * Called when the activity is first created.
      */
-    private LinearLayout mTabWeixin;
+    private LinearLayout mTabHome;
     private LinearLayout mTabFriend;
 
     private ContentFragment mWeixin;
@@ -26,9 +29,9 @@ public class MyActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.main);
 
         // 初始化控件和声明事件
-        mTabWeixin = (LinearLayout) findViewById(R.id.tab_home_page);
+        mTabHome = (LinearLayout) findViewById(R.id.tab_home_page);
         mTabFriend = (LinearLayout) findViewById(R.id.tab_local);
-        mTabWeixin.setOnClickListener(this);
+        mTabHome.setOnClickListener(this);
         mTabFriend.setOnClickListener(this);
 
         // 设置默认的Fragment
